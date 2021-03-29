@@ -88,12 +88,40 @@ echo "*******************************"
 
 read -p "Enter company name: " CName
 
-if [[$CName == "Alienware"]]; 
+if [ [$CName == "Alienware"] ]; 
 	#|| ["$CName" == "Asus"];
 then echo "It's a esport brand"
 else echo "It's not an esport brand"
 fi
 
+#test command
 
+echo "*************************"
+echo "  Using the test command "
+echo "*************************"
 
-#testing github
+read -p "Enter 1st number " num1
+read -p "Enter 2nd number " num2
+test $num1 -lt $num2 && echo "$num1 is less than $num2" || echo "$num1 is greater than $num2" 
+
+#if Statements
+
+echo "************************"
+echo " if statements          "
+echo "************************"
+
+#read -p "Enter 1st number " num1
+#read -p "Enter 2nd number " num2
+
+if [ $num1 -eq $num2 ] ;
+then echo "equals"
+elif [ $num1 -ne $num2 ] ;
+then echo "not equal"
+elif [ $num1 -gt $num2 ] ;
+then echo "greater than"
+elif [ $num1 -lt $num2 ] ;
+then echo "less than" 
+elif [ $num1 -le $num2 ] ;
+then echo "less than or equall to" 
+
+fi
